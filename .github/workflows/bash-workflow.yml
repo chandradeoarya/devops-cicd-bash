@@ -1,0 +1,19 @@
+---
+name: Bash Workflow
+on:
+  push:
+    branches:
+      - githubactions
+  pull_request:
+    branches:
+      - githubactions
+jobs:
+  bash-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Message
+        run: echo "Learn DevOps"
+      - name: echo using shell
+        run: sh 'echo using shell within Githubactions'
+      - name: not using shell
+        run: echo 'not using shell in the Githubactions'
